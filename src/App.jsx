@@ -1,16 +1,15 @@
-
 import './App.css'
+import Header from './components/header'
 
 function App() {
-  const msg = "안녕하세요! 상모만 입니더"
+  
   return (
-    <>
-      <div>
-        <h1>{msg}</h1>
-      </div>
-
-    </>
+  
+    <div className="App">
+      <Header />
+    </div>
+  
   )
 }
 
-export default App
+export default App;
