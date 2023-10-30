@@ -24,9 +24,13 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-  
     border-radius: 5px;
     border: 4px dashed #ddd;
     user-select: none;
     transition: 0.4s;
+  }
+
+img{
+    width: 500px;
+    height: 500px;
   }
