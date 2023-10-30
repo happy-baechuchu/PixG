@@ -5,11 +5,20 @@ main{
   font-family: 'Rowdies', sans-serif;    position: absolute;
 }
 
+.choice{
+  font-family: 'Rowdies', sans-serif;  
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  transform: translate(-50%, -20%);
+}
+
+
 .textBox{
   font-family: 'Rowdies', sans-serif;  
   position: absolute;
-  left: 50%;
-  top: 25%;
+  left: 22%;
+  top: 40%;
   transform: translate(-50%, -20%);
   display: flex;
   flex-direction: column;
@@ -45,9 +54,7 @@ button:hover{
 
 .gen {
   background-color: #fff7d4;
-
-  margin-left: 10px;
-  /* font-weight: 300; */
+  margin-top: 20px;
 }
 
 .out{
@@ -59,8 +66,8 @@ button:hover{
 .outPut {
   font-family: 'Rowdies', sans-serif;
   position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  border:;
+  right: 15%;
+  top: 50%;
+  transform: translate(-30%, -50%);
 }
+
