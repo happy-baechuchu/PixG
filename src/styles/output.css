@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap');
+
+
+h2{
+    font-family: 'Rowdies', sans-serif;  
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+.imageBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50vw;
+    height: 50vh;
+     
+    margin-top: 50px;
+    overflow: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 5px;
+    border: 4px dashed #ddd;
+    user-select: none;
+    transition: 0.4s;
+  }

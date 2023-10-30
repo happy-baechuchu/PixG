@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
 
 header {
     
@@ -7,10 +7,15 @@ header {
     align-items: center;
     background-color: #ffd95a;
     justify-content: center;
-    font-family: 'Pixelify Sans', sans-serif;
-}
+    font-family: 'Rowdies', sans-serif;}
 
 
 .logo {
     font-size: 50px;
+    cursor: pointer;
+    color: #000;
+}
+
+.logo:hover {
+    color: #4c4d3d;
 }

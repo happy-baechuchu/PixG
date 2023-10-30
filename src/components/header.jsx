@@ -1,11 +1,13 @@
 import '../styles/header.css'
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     return (
         <header>
-            <div className="bar">
-                <div className="logo">PixG</div>
-            </div>
+            <Link to="/">
+            <div className="logo">PixG</div>
+            </Link>
         </header>
     )
 }
