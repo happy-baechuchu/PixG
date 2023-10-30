@@ -7,13 +7,50 @@ main{
 }
 
 .textBox{
-
+  font-family: 'Pixelify Sans', sans-serif;
   position: absolute;
   left: 50%;
   top: 30%;
   transform: translate(-50%, -20%)
 }
 
-button{
+.text1{
+  height: 30px;
+  font-family: 'Pixelify Sans', sans-serif;
 
+}
+
+button{
+  background-color: #fff7d4;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+button:hover{
+  background-color: #ffd95a;
+  border-color:#4c4d3d;
+}
+
+.gen:hover{
+  border-color:#4c4d3d
+}
+
+.out:hover{
+  border-color:#4c4d3d
+
+}
+
+
+.gen {
+  margin-left: 10px;
+}
+
+
+.outPut {
+  font-family: 'Pixelify Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  border:;
+  background-color: ;
 }
