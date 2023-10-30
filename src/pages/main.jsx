@@ -1,4 +1,5 @@
-import '../styles/main.css'
+import '../styles/main.css';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
     return (
@@ -11,10 +12,9 @@ const Main = () => {
             </form>
 
             <div className="outPut">
-                <button className="out"
-                a href=""
-                target="_blank"
-                rel="noopener noreferrer">Show me</button>
+                <Link to="/output">
+                <button className="out">Show me</button>
+                </Link>
             </div>
 
 
