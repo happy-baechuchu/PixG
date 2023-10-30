@@ -71,3 +71,29 @@ button:hover{
   transform: translate(-30%, -50%);
 }
 
+.smile{
+
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-70%);
+  animation-name: pixel-smile;
+  animation-duration: 10s;  
+  animation-iteration-count: infinite;  
+  animation-timing-function: linear 
+}
+
+@keyframes pixel-smile {
+  0% {
+    right:0;
+  }
+
+  100% {
+    right: 3000px; 
+  }
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
