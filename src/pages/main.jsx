@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 const Main = () => {
     return (
         <>
-            <form className="textBox" method="get">
-                <input type="text" className="text1" 
+            <form className="textBox" action="" method="get">
+                Prompt :
+                <input type="textarea" className="text1" 
                 placeholder="English please." />
-                <button className="gen">Generate
+                <button className="gen">Create
                 </button>
             </form>
 
