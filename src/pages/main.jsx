@@ -1,49 +1,49 @@
 import "../styles/main.css";
-import React, { useState } from 'react'; // Import useState
+import React, { useState } from "react"; // Import useState
 import { Link } from "react-router-dom";
 
 const Main = () => {
-    const [showSmile, setShowSmile] = useState(false);
+const [showSmile, setShowSmile] = useState(false);
 
-    // Event handler for the Create button
-    const handleCreateClick = () => {
-      setShowSmile(true);
-    };
+  // Event handler for the Create button
+const handleCreateClick = () => {
+    setShowSmile(true);
+};
 
-  return (
+return (
     <>
-      <form className="choice" action="#" method="get">
+    <form className="choice" action="#" method="get">
         <label> Choice : </label>
         <select name="chanuilChoice">
-          <option value="cha">
-            character
-          </option>
-          <option value="buil">building</option>
+        <option value="cha">character</option>
+        <option value="buil">building</option>
         </select>
-      </form>
-      <form className="textBox" action="#" method="get">
+    </form>
+    <form className="textBox" action="#" method="get">
         Prompt :
         <input
-          type="textarea"
-          className="text1"
-          placeholder="English please."
+        type="textarea"
+        className="text1"
+        placeholder="English please."
         />
-        <button className="gen" onClick={handleCreateClick}>Create</button>
-      </form>
+        <button className="gen" onClick={handleCreateClick}>
+        Create
+        </button>
+    </form>
 
-         {showSmile && (
+    {showSmile && (
         <div className="smile">
-          <img src="././public/pixel.png" alt="" />
+        <img src="././public/pixel.png" alt="" />
         </div>
-      )}
+    )}
 
-      <div className="outPut">
+    <div className="outPut">
         <Link to="/output">
-          <button className="out">Show me</button>
+        <button className="out">Show me</button>
         </Link>
-      </div>
+    </div>
     </>
-  );
+);
 };
 
 export default Main;
