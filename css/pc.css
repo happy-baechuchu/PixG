@@ -38,7 +38,7 @@ nav ul{
 }
 
 .ul_imgBox{
-    margin-left: 900px;
+    margin-left:700px;
     gap: 20px;
     display: flex;
     flex-direction: row;
@@ -78,8 +78,6 @@ nav li.on{
 
 .s1 video{
     width: 100%;
-    
-
 
 }
 section{
@@ -92,6 +90,7 @@ section{
 
 .s1{
     position: relative;
+
 }
 
 .a1{
@@ -99,8 +98,8 @@ section{
     text-align: center;
     position: absolute;
     left:50%;
-    top: 40%;
-    transform: translate(-50%, -10%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-size: 60px;
     color: #48FF23;
 }
@@ -112,7 +111,9 @@ section{
 
 /*---------------s2 시작-------------------*/
 .a2{
-    margin-top: 100px;
+    width: 100%;
+
+    margin-top: 80px;
     font-family: 'Press Start 2P';
     color: #48FF23;
     font-size: 30px;
@@ -127,7 +128,7 @@ section{
 }
 
 .a2 .f1{
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -136,7 +137,7 @@ section{
 }
 
 .a2 .f2{
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .a2 .ta{
@@ -155,7 +156,7 @@ section{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 50px;
-    /* font-size: 20px; */
+    font-size: 18px;
 }
 
 
@@ -199,9 +200,10 @@ section{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 70px;
+    font-size: 18px;
 }
 /*---------------s4 시작-------------------*/
-.s4 .a4{
+.s4 .wrap{
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -210,40 +212,149 @@ section{
     left:50%;
     top:65%;
     transform: translate(-50%, -20%);
-    margin-top: 40px;
+    margin-top: 20px;
+
 }
 
-.a4 .a4_1, .a4_2{
+.wrap .a4_1, .a4_2{
     display: flex;
     flex-direction:row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-.a4 .a4_2{
-    margin-top: 10px;
+.wrap .a4_2{
+    margin-top: 15px;
+}
+
+article{
+    font-family: 'Press Start 2P';
+
+    width: 300px;
+    height: 350px;
+    background-color: rgba(72, 255, 35, 0.80);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: all 1s;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    text-align: center;
+}
+
+article:hover{
+    transform: translate(-5px, -5px);
+    box-shadow: 7px 7px 30px rgba(0,0,0,0.1);
+    background-color: rgb(72, 255, 35);
 }
 
 .assetBox{
-    width: 350px;
-    height: 400px;
-    background-color: rgba(72, 255, 35, 0.80);
-    border-radius: 10px;
+    height: 300px;
+    overflow: hidden;
+    /* margin: 20px; */
+
+}
+
+.assetBox img{
+    width: 100%;
+
+}
+
+.txt{
+    /* margin-top: 5px; */
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.txt p{
+    margin-top: 5px;
+}
+
+.imgView{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+}
+
+.imgView i{
+    /* font-style: italic; */
+    color: #fff;
+    position: absolute;
+    right: 500px;
+    top: 100px;
+    font-size: 50px;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    font-family: 'Press Start 2P';
+    /* border: solid 1px #fff; */
+ 
+}
+
+.imgShow{
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+.imgShow img{
+    width: 100%;
+}
+
+.txtBox{
+    font-family: 'Press Start 2P';
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.txtBox p{
+    margin-top: 10px;
+}
+
+.closeWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /*---------------s5 시작-------------------*/
 .s5{
     position: relative;
+    /* background-image: url(../images/meta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    opacity: 0.7;
+}
+.s5 video{
+    width: 100%;
+
+}
+.s5 .a5{
+    
+
 }
 
-.s5 .my5{
-    transform: translate(-50%, -20%);
-}
 
 
-
-footer{
+/* footer{
     width: 100%;
     height: 60px;
     background-color: #48FF23;
@@ -266,7 +377,7 @@ footer{
     padding-left: 100px;
     font-family: 'Gowun dodum';
     color: #000;
-}
+} */
 
 }
 /* -----------PC------------------ */

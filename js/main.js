@@ -46,7 +46,7 @@ $('nav li').click(function(){
 
   let i = $(this).index()
 
-  $('html, body').stop().animate({'scrollTop' : scrHig * i +1})
+  $('html, body').stop().animate({'scrollTop' : scrHig * i+1})
 
 });
 
@@ -144,3 +144,22 @@ String.prototype.toKorChars = function() {
       }
     }
 
+    $('article').click(function(e){
+      e.preventDefault(); //a태그로 인해 새로고침 되는 것을 막음
+
+      $('.imgView').fadeIn();
+
+      let img = $(this).find('.assetBox').html();
+      $('.imgShow').html(img);
+
+      let h4 = $(this).find('h4').html();
+      $('.imgView').find('h4').html(h4);
+
+      let p = $(this).find('p').html();
+      $('.imgView').find('p').html(p)
+     
+  });
+
+  $('i, .closeWrap').click(function(){
+      $('.imgView').fadeOut()
+  });
