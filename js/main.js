@@ -10,7 +10,7 @@ $(window).on('scroll',function(){
     if(scr >= 0 && scr < scrHig){
       $('nav').stop().animate({'left':'-100%'})
     }   
-    if(scr >= scrHig){
+    if(scr > scrHig){
       $('nav').stop().animate({'left':0})
     }
 
@@ -46,10 +46,14 @@ $('nav li').click(function(){
 
   let i = $(this).index()
 
-  $('html, body').stop().animate({'scrollTop' : scrHig * i+1})
+  $('html, body').stop().animate({'scrollTop' : scrHig * i +60})
 
 });
 
+$('.gen').click(function(){
+  $('html, body').stop().animate({'scrollTop' : scrHig * 3 +60})
+
+})
 
 $('#wrap section').on('mousewheel',function(e,d){
 
@@ -65,84 +69,6 @@ $('#wrap section').on('mousewheel',function(e,d){
   
 });
 
-// https://westzero.tistory.com/112
-String.prototype.toKorChars = function() { 
-  var cCho = [ 'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ' ], 
-  cJung = [ 'ㅏ', 'ㅐ', 'ㅑ', 'ㅒ', 'ㅓ', 'ㅔ', 'ㅕ', 'ㅖ', 'ㅗ', 'ㅘ', 'ㅙ', 'ㅚ', 'ㅛ', 'ㅜ', 'ㅝ', 'ㅞ', 'ㅟ', 'ㅠ', 'ㅡ', 'ㅢ', 'ㅣ' ], 
-  cJong = [ '', 'ㄱ', 'ㄲ', 'ㄳ', 'ㄴ', 'ㄵ', 'ㄶ', 'ㄷ', 'ㄹ', 'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ', 'ㅀ', 'ㅁ', 'ㅂ', 'ㅄ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ' ], cho, jung, jong; 
-   
-  var str = this, 
-      cnt = str.length, 
-      chars = [], 
-      cCode; 
-  for (var i = 0; i < cnt; i++) { 
-    cCode = str.charCodeAt(i); 
-    if (cCode == 32) { 
-      chars.push(" ");
-      continue;
-    } 
-    if (cCode < 0xAC00 || cCode > 0xD7A3) { 
-      chars.push(str.charAt(i)); continue; 
-    } 
-    cCode = str.charCodeAt(i) - 0xAC00; 
- 
-    jong = cCode % 28; // 종성 
-    jung = ((cCode - jong) / 28 ) % 21 // 중성 
-    cho = (((cCode - jong) / 28 ) - jung ) / 21 // 초성 
- 
-
-    chars.push(cCho[cho]);
-    chars.push(String.fromCharCode( 44032 + (cho * 588) + (jung  * 28)));
-    if (cJong[jong] !== '') { 
-       chars.push(String.fromCharCode( 44032 + (cho * 588) + (jung  * 28) + jong ));
-    }
-            
-  } 
-  return chars; 
- }
- 
- 
- //타이핑할 문장
-    var result  = "Pixel Generator";
-    var typeing1=[];
-    result = result.split(''); // 한글자씩자름
- 
-    //각글자 초성,중성,종성으로 나눔
-    for(var i =0; i<result.length; i++){
-      typeing1[i]=result[i].toKorChars();
-    }
- 
-    //출력할 엘리먼트요소 가져옴 
-    var resultDiv = document.getElementsByClassName("result")[0];
- 
-    var text = "";
-    var i=0; 
-    var j=0; 
- 
-    //총글자수
-    var imax = typeing1.length;
- 
-    //setInterval을 이용해 반복적으로 출력 
-    var inter = setInterval(typi,150);
- 
- 
-    function typi(){
-      //글자수만큼 반복후 종료 
-      if(i<=imax-1){
-        //각 글자가 초성 중성 종성 순서대로 추가되도록 
-        var jmax = typeing1[i].length;
-        resultDiv.innerHTML = text + typeing1[i][j];
-        j++;
-        if(j==jmax){
-          text+=typeing1[i][j-1];
-          //초성중성종성 순서대로 출력된 글자는 저장 ( 다음 글자와 이어붙이기 위해서 )
-          i++;
-          j=0;
-        }
-      } else{
-        clearInterval(inter);
-      }
-    }
 
     $('article').click(function(e){
       e.preventDefault(); //a태그로 인해 새로고침 되는 것을 막음
@@ -157,9 +83,92 @@ String.prototype.toKorChars = function() {
 
       let p = $(this).find('p').html();
       $('.imgView').find('p').html(p)
-     
+
   });
 
   $('i, .closeWrap').click(function(){
       $('.imgView').fadeOut()
   });
+
+
+  v=document.getElementById("Main");
+  v.playbackRate=1.5;
+
+
+var cursorBig = document.querySelector('.big');
+var cursorSmall = document.querySelector('.small');
+var a = document.querySelectorAll('button');
+var b = document.querySelectorAll('article');
+var c = document.querySelectorAll('i');
+var d = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorBig.style.transform = `translate3d(calc(${x}px - 50%), calc(${y-60}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorSmall.style.left = x + 'px';
+  cursorSmall.style.top = y + 'px';
+});
+
+
+document.addEventListener('mousedown', function(){
+  cursorBig.classList.add('click');
+  cursorSmall.classList.add('hover__small')
+});
+
+
+document.addEventListener('mouseup', function(){
+  cursorBig.classList.remove('click')
+  cursorSmall.classList.remove('hover__small')
+});
+
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursorBig.classList.add('hover__big');
+    cursorSmall.classList.add('hover__small');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursorBig.classList.remove('hover__big');
+    cursorSmall.classList.remove('hover__small');
+  });
+})
+
+b.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursorBig.classList.add('hover__big');
+    cursorSmall.classList.add('hover__small');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursorBig.classList.remove('hover__big');
+    cursorSmall.classList.remove('hover__small');
+  });
+})
+
+c.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursorBig.classList.add('hover__big');
+    cursorSmall.classList.add('hover__small');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursorBig.classList.remove('hover__big');
+    cursorSmall.classList.remove('hover__small');
+  });
+})
+
+
+d.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursorBig.classList.add('hover__big');
+    cursorSmall.classList.add('hover__small');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursorBig.classList.remove('hover__big');
+    cursorSmall.classList.remove('hover__small');
+  });
+})

@@ -9,6 +9,9 @@
     <title>PixG</title>
 </head>
 <body>
+    <div class="cursor small"></div>
+    <div class="cursor big"></div>
+
 
 <nav>
     <ul>
@@ -19,9 +22,9 @@
             <li>Asset</li>
             <li>Link</li>
             <div class="ul_imgBox">
-                <img src="../images/🦆 icon _minus outline_.png">
-                <img src="../images/🦆 icon _copy outline_.png">
-                <img src="../images/🦆 icon _close outline_.png">
+                <img src="../images/icon _minus outline_.png">
+                <img src="../images/icon _copy outline_.png">
+                <img src="../images/icon _close outline_.png">
             </div>
         </div>
 
@@ -35,7 +38,7 @@
             <p class="result" style="margin-top: 60px;"></p>
         </div>a1 -->
 
-        <video src="../images/Main.mp4" muted="muted" autoplay style="margin-top:-30px"></video>
+        <video id="Main" src="../images/Main2.mp4" muted="muted" autoplay style="margin-top:-120px"></video>
 
     </section><!--s1-->
 
@@ -43,7 +46,7 @@
     <section class="s2">
         <div class="a2">                
             <p class="notice">Let's create your own sprite sheet!</p>
-            <form class="f1" action="#">
+            <form class="f1" action="">
                 <input id="Character" type="radio" name="choice" value="C" checked>
                 <label for="character">CHARACTER</label>
                 <input id="Item" type="radio" name="choice" value="I">
@@ -52,15 +55,24 @@
                 <label for="structure">STRUCTURE</label>
             </form>
 
-            <form class="f2" action="#">
+            <form class="f2">
                 <textarea class="ta" name="contents" id="" cols="30" rows="10"
                  style="resize:none"></textarea>
-        
+                
                 <br>
-                <button class="gen">Generate</button>
+                <button class="gen">
+                    <a href="download.html" target="_blank">
+                        Generate
+                    </a>
+                </button>
             </form>
+       
         </div><!--a2-->
 
+        <!-- <div class="loading">
+            <h1>1분만 기다려주세요.</h1>
+
+        </div> -->
     </section><!--s2-->
 
 
@@ -74,8 +86,12 @@
         </p><!--information-->
 
         <div class="a3">
-            <div class="imgBox"></div>
-            <botton class="down">Download</botton>
+
+            <div class="imgBox">
+                <img src="../images/gif_3.gif" alt="">
+            </div>
+            <button class="down"><a href="../images/gif_3.gif" download="">Download</a></button>
+
         </div><!--a3-->
         
     </section><!--s3-->
@@ -86,17 +102,17 @@
             <div class="a4_1">    
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/spr_1.jpg">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>Red hair, cute girl</p>
                     </div><!--txt-->
                 </a></article><!-- 첫번째 아티클 -->
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/spr_2.jpg">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
@@ -106,31 +122,31 @@
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/spr_3.png">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>a Knight holding sword</p>
                     </div><!--txt-->
                 </a></article><!-- 세번째 아티클 -->
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/gif_1.gif">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>Astronaut woman</p>
                     </div><!--txt-->
                 </a></article><!-- 네번째 아티클 -->
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/gif_2.gif">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>Red hair, running guy</p>
                     </div><!--txt-->
                 </a></article><!-- 다섯번째 아티클 -->
 
@@ -139,51 +155,53 @@
             <div class="a4_2">
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/gif_5.gif">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>A knight holding sword<br><br>
+                            wearing blue armor
+                        </p>
                     </div><!--txt-->
                 </a></article><!-- 여섯번째 아티클 -->
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/gif_4.gif">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>Blue hair, running girl</p>
                     </div><!--txt-->
                 </a></article><!-- 일곱번째 아티클 -->
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/gif_3.gif">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>Yellow hair, running</p>
                     </div><!--txt-->
                 </a></article><!-- 여덟번째 아티클 -->
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/item_1.png">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>wizard item, ring, etc.</p>
                     </div><!--txt-->
                 </a></article><!-- 아홉번째 아티클 -->
 
                 <article><a href="#">
                     <div class="assetBox">
-                        <img src="../images/cha_1.jpg">
+                        <img src="../images/gif_6.gif">
                     </div><!-- assetBox -->
                     <div class="txt">
                         <h4>Prompt</h4>
-                        <p>Blue hair, cute girl</p>
+                        <p>Jumping knight, sword</p>
                     </div><!--txt-->
                 </a></article><!-- 열번째 아티클 -->
 
@@ -193,31 +211,35 @@
 
     <div class="imgView">
         <div class="closeWrap"></div>
+        <div class="viewBox">
         <i>X</i>
         <div class="imgShow">
         </div><!--imgShow 끝-->
         <div class="txtBox">
             <h4>PROMPT</h4>
             <p>Blue hair, cute girl</p>
+
+
+        </div>
         </div>
     </div><!-- imgView 끝-->
 
     </section><!--s4 끝-->
 
 
-    <section class="s5">
+    <section class="s5">            
+        <video src="../images/s5_1.mp4" muted="muted" autoplay loop></video>
         <div class="a5">
-            <div class="zep"></div>
-            <div class="unity"></div>
-            <video src="../images/s5_1.mp4" muted="muted" autoplay></video>
+            <a class="zep" href="https://zep.us/store" target="_blank">ZEP Asset store</a><br><br><br>
+            <a class="unity" href="https://assetstore.unity.com/ko" target="_blank">Unity Asset store</a>
 
         </div><!--a5 끝-->
         
-        <footer>
+        <!-- <footer>
             <p class="fp">
             Metaverse Academy The Last Project. SANG MO MAN | <span> PixG</span>
             </p>
-        </footer>
+        </footer> -->
     </section><!--s5 끝-->
     
 </div>
